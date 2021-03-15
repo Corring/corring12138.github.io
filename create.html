@@ -308,6 +308,7 @@
 
 
 				function getcontent(){
+					console.log('Hello')
 					// creating an instance of the HTTP request object
 					var xmlHttp = new XMLHttpRequest();
 					// specify the method and the url of request
@@ -319,6 +320,7 @@
 
 					var element = document.getElementById("content-text");
 					element.innerHTML = xmlHttp.responseText;
+					console.log(xmlHttp.responseText)
 				}
             </script>
 
