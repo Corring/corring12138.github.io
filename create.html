@@ -15,7 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="getcontent()">
 
 		<!-- Content -->
 			<div id="content">
@@ -50,16 +50,16 @@
 
                             <!--upload picture-->
 							<div class="content-img">
-                                <ul class="content-img-list">
+                                <ul class="content-img-list" id ='content-img-list' style="list-style-type:none;">
                                     <!-- <li class="content-img-list-item"><img src="https://www.baidu.com/img/bd_logo1.png" alt=""><a class="delete-btn"><i class="ico-delete"></i></a></li> -->
                                 </ul>
                                 <div class="file">
-                                    <i class="ico-plus"></i>上传图片，支持jpg/png<input type="file" name="file" accept="image/*" id="upload" >
+                                    <i class="ico-plus"></i>上传图片，支持jpg/png<input type="file" name="file" accept="image/*" id="upload" onchange="handleFiles(this.files)">
                                 </div>	
                             </div>
                               
 
-							<p>
+							<p id='content-text'>
 								
 							</p>
 							
@@ -208,19 +208,10 @@
 			<script src="assets/js/main.js"></script>
             <script>
                 // 通过jquery监听input change事件，这样我们可以获取到上传的图片流信息，从而可以获取到图片的地址、大小、格式以及名称等信息
-
                 // 这里创建3个数组，imgName、imgSrc、imgFile分别用于存放上传图片的名称、url地址以及图片流信息
-                var imgName;
-                var imgSrc;
-                var imgFile;
-                var fileList = document.getElementById('upload').files;
-                console.log(fileList)
-                for(var i = 0; i < fileList.length; i++) {
-                    var imgSrcI = getObjectURL(fileList[i]);
-                    imgName.push(fileList[i].name);
-                    imgSrc.push(imgSrcI);
-                    imgFile.push(fileList[i]);
-                }
+                var imgName = [];
+                var imgSrc= [];
+                var imgFile= [];
 
                 // getObjectURL方法是一个用于获取本地图片的地址，使用该url可以显示图片
                 function getObjectURL(file) {
@@ -234,39 +225,43 @@
                     }
                     return url ;
                 }
-                
-                // 控制上传图片大小、格式以及上传数量
-                $('#upload').on('change',function(){		
-                    if(imgSrc.length==4){
-                        return alert("最多只能上传4张图片");
-                    }
-                    var imgSize = this.files[0].size;  //b
-                    if(imgSize>1024*1024*1){//1M
-                        return alert("上传图片不能超过1M");
-                    }
-                    if(this.files[0].type != 'image/png' && this.files[0].type != 'image/jpeg' && this.files[0].type != 'image/gif'){
-                        return alert("图片上传格式不正确");
-                    }
-                })
 
                 // 创建一个addNewContent方法用于动态展示添加的图片实现图片预览，在每次上传图片的时候调用该方法
                 function addNewContent(obj) {
                     $(obj).html("");
                     for(var a = 0; a < imgSrc.length; a++) {
                         var oldBox = $(obj).html();
-                        $(obj).html(oldBox + '<li class="content-img-list-item"><img src="'+imgSrc[a]+'" alt=""><a index="'+a+'" class="hide delete-btn"><i class="ico-delete"></i></a></li>');
+                        $(obj).html(oldBox + '</br><li class="content-img-list-item"><img src="'+imgSrc[a]+'" alt="" style="width:200px"><a index="'+a+'" class="hide delete-btn" style:"right=15%"><button>delete</button></a></li>');
                     }
                 }
-
                 // 通过监听鼠标的mouseover事件，显示图片删除按钮
                 $('.content-img-list').on('mouseover','.content-img-list-item',function(){
-                    $(this).children('a').removeClass('hide');
+                    $(this).children('a').show();
                 });
 
                 // 监听鼠标的mouseleave事件，隐藏图片删除按钮
                 $('.content-img-list').on('mouseleave','.content-img-list-item',function(){
-                    $(this).children('a').addClass('hide');
+                    $(this).children('a').hide();
                 });
+
+                // 上传图片
+                function handleFiles(files) {
+                    var fileList  = files; /* now you can work with the file list */
+                    console.log(fileList)    
+                    for(var i = 0; i < fileList.length; i++) {
+                            var imgSrcI = getObjectURL(fileList[i]);
+                            console.log('imgsrc: '+imgSrcI)  
+                            imgName.push(fileList[i].name);
+                            console.log('imgName: '+imgName) 
+                            imgSrc.push(imgSrcI);
+                            imgFile.push(fileList[i]);
+                            console.log('imgFile: '+imgFile) 
+                            console.log(getObjectURL(fileList[i]))
+                    }
+                    // 显示上传的图片
+                    addNewContent(document.getElementById('content-img-list'))
+                     
+                }
 
                 // 获取图片index下标属性，通过js的splice方法删除数组元素，重新调用addNewContent方法遍历图片数组显示预览图片
                 $(".content-img-list").on("click",'.content-img-list-item a',function(){
@@ -296,7 +291,7 @@
 
                 // 最后使用ajax提交内容
                 $.ajax({
-                    url: 'file:///D:/githubPage/Corring12138.github.io/create.html',
+                    url: 'https://corring.github.io/corring12138.github.io/create.html',
                     type: 'POST',
                     data: formFile,
                     async: true,  
@@ -309,6 +304,22 @@
                         console.log(res);
                     }
                 })
+
+
+
+				function getcontent(){
+					// creating an instance of the HTTP request object
+					var xmlHttp = new XMLHttpRequest();
+					// specify the method and the url of request
+					xmlHttp.open("GET","开始载入.txt",true)
+					
+					xmlHttp.send();
+
+					//xmlHttp.responseText = game-list.php
+
+					var element = document.getElementById("content-text");
+					element.innerHTML = xmlHttp.responseText;
+				}
             </script>
 
 	</body>
