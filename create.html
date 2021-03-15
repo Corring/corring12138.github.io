@@ -313,15 +313,15 @@
 					var xmlHttp = new XMLHttpRequest();
 					// specify the method and the url of request
 					xmlHttp.open("GET","开始载入.txt")
-					var element = document.getElementById("content-text");
-					element.innerHTML = xmlHttp.responseText;
-					console.log(xmlHttp.responseText)
+					xmlHttp.onload = function(){
+						var element = document.getElementById("content-text");
+						element.innerHTML = xmlHttp.responseText;
+						console.log(xmlHttp.responseText)
+					}
 					xmlHttp.send();
 
 					//xmlHttp.responseText = game-list.php
 
-				
-				}
 				}
             </script>
 
