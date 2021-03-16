@@ -55,6 +55,29 @@
 							</p>
 						</article>
 					</div>
+<<<<<<< HEAD
+=======
+					<script>
+						// 将txt文档中的内容po到网页上
+						function getcontent(){
+							// 测试有没有成功使用函数
+							console.log('Hello getcontent')
+							// creating an instance of the HTTP request object
+							var xmlHttp = new XMLHttpRequest();
+							// specify the method and the url of request
+							xmlHttp.open("GET","开始载入.txt")
+							xmlHttp.onload = function(){
+								// 放入特定的位置
+								$('.posts').append(xmlHttp.responseText);
+								console.log(xmlHttp.responseText)
+							}
+							xmlHttp.send();
+
+							//xmlHttp.responseText = game-list.php
+
+						}
+					</script>
+>>>>>>> deaf459892eef609dcb3d3e0caf382a638a61640
 
 					<!-- Pagination -->
 						<div class="pagination">
