@@ -66,9 +66,7 @@
 							xmlHttp.open("GET","开始载入.txt")
 							xmlHttp.onload = function(){
 								// 放入特定的位置
-								$('.inner').add()
-								var element = document.getElementById("posts");
-								element.innerHTML = xmlHttp.responseText;
+								$('.posts').append(xmlHttp.responseText);
 								console.log(xmlHttp.responseText)
 							}
 							xmlHttp.send();
