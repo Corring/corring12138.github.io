@@ -274,29 +274,8 @@
                 formFile.append("type", type); 
                 formFile.append("content", content); 
                 formFile.append("mobile", mobile);
+				
 
-				function SaveContent(){
-					var name = $('input').val();	
-					$.post('save.txt',name);
-					
-
-				}
-
-                // 最后使用ajax提交内容
-                $.ajax({
-                    url: 'https://corring.github.io/corring12138.github.io/create.html',
-                    type: 'POST',
-                    data: formFile,
-                    async: true,  
-                    cache: false,  
-                    contentType: false, 
-                    processData: false, 
-                    // traditional:true,
-                    dataType:'json',
-                    success: function(res) {
-                        console.log(res);
-                    }
-                })
 
 
             </script>
