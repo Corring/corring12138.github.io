@@ -6,10 +6,11 @@
 	<div class="info">
 		<span class="date"><span class="month">MAR<span>y</span></span> <span class="day">16</span><span class="year">, 2021</span></span>
 	</div>
-	<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+	<a href="#" class="image featured"><img src="#" alt="" /></a>
 	<p>
 		这次的post是从txt文件po上来的。昨天和前天实现了，图片上传并在页面上显示和删除，以及从后端的文件中读取html的content。算是不小的啊这个进步？
 		反正我是学了很多，头超大。
 		随后要进行图片和文本的保存，还有日期的跳转和保存。
+		这次图片先不po了，还有我要解决换行问题。
 	</p>				
 </article>
