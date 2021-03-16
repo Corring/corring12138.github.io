@@ -55,28 +55,6 @@
 							</p>
 						</article>
 					</div>
-					<script>
-						// 将txt文档中的内容po到网页上
-						function getcontent(){
-							// 测试有没有成功使用函数
-							console.log('Hello getcontent')
-							// creating an instance of the HTTP request object
-							var xmlHttp = new XMLHttpRequest();
-							// specify the method and the url of request
-							xmlHttp.open("GET","开始载入.txt")
-							xmlHttp.onload = function(){
-								// 放入特定的位置
-								$('.inner').add()
-								var element = document.getElementById("posts");
-								element.innerHTML = xmlHttp.responseText;
-								console.log(xmlHttp.responseText)
-							}
-							xmlHttp.send();
-
-							//xmlHttp.responseText = game-list.php
-
-						}
-					</script>
 
 					<!-- Pagination -->
 						<div class="pagination">
@@ -231,4 +209,22 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script>
+		// 将txt文档中的内容po到网页上
+		function getcontent(){
+			// 测试有没有成功使用函数
+			console.log('Hello getcontent')
+			// creating an instance of the HTTP request object
+			var xmlHttp = new XMLHttpRequest();
+			// specify the method and the url of request
+			xmlHttp.open("GET","开始载入.txt")
+			xmlHttp.onload = function(){
+				// 放入特定的位置
+				$('.posts').append(xmlHttp.responseText);
+				console.log(xmlHttp.responseText)
+			}
+			xmlHttp.send();
+			//xmlHttp.responseText = game-list.php
+		}
+	</script>
 </html>
