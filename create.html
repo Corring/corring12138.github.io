@@ -308,17 +308,20 @@
 
 
 				function getcontent(){
+					console.log('Hello')
 					// creating an instance of the HTTP request object
 					var xmlHttp = new XMLHttpRequest();
 					// specify the method and the url of request
-					xmlHttp.open("GET","开始载入.txt",true)
-					
+					xmlHttp.open("GET","开始载入.txt")
+					xmlHttp.onload = function(){
+						var element = document.getElementById("content-text");
+						element.innerHTML = xmlHttp.responseText;
+						console.log(xmlHttp.responseText)
+					}
 					xmlHttp.send();
 
 					//xmlHttp.responseText = game-list.php
 
-					var element = document.getElementById("content-text");
-					element.innerHTML = xmlHttp.responseText;
 				}
             </script>
 
