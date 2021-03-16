@@ -15,7 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</head>
-	<body class="is-preload" onload="getcontent()">
+	<body class="is-preload" >
 
 		<!-- Content -->
 			<div id="content">
@@ -55,7 +55,8 @@
                                 </ul>
                                 <div class="file">
                                     <i class="ico-plus"></i>上传图片，支持jpg/png<input type="file" name="file" accept="image/*" id="upload" onchange="handleFiles(this.files)">
-                                </div>	
+									<button onclick="SaveContent()">SaveContent</button>
+								</div>	
                             </div>
                               
 
@@ -289,6 +290,15 @@
                 formFile.append("content", content); 
                 formFile.append("mobile", mobile);
 
+				function SaveContent(){	
+					// creating an instance of the HTTP request object
+					var xmlHttp = new XMLHttpRequest();
+					// specify the method and the url of request
+					xmlHttp.open("POST","保存图片.jpg")
+					xmlHttp.send();
+					//xmlHttp.responseText = game-list.php
+				}
+
                 // 最后使用ajax提交内容
                 $.ajax({
                     url: 'https://corring.github.io/corring12138.github.io/create.html',
@@ -306,23 +316,6 @@
                 })
 
 
-
-				function getcontent(){
-					console.log('Hello')
-					// creating an instance of the HTTP request object
-					var xmlHttp = new XMLHttpRequest();
-					// specify the method and the url of request
-					xmlHttp.open("GET","开始载入.txt")
-					xmlHttp.onload = function(){
-						var element = document.getElementById("content-text");
-						element.innerHTML = xmlHttp.responseText;
-						console.log(xmlHttp.responseText)
-					}
-					xmlHttp.send();
-
-					//xmlHttp.responseText = game-list.php
-
-				}
             </script>
 
 	</body>
