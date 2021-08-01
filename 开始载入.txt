@@ -1,13 +1,14 @@
 <article class="box post post-excerpt">
 	<header>
-		<h2><a href="#">制作BLOG的第四天</a></h2>
-		<p>跟我一起开发能实时更新的BLOG</p>
+		<h2><a href="#">研究生作业笔记</a></h2>
+		<p>饿死了</p>
 	</header>
 	<div class="info">
-		<span class="date"><span class="month">MAR<span>y</span></span> <span class="day">16</span><span class="year">, 2021</span></span>
+		<span class="date"><span class="month">JUN<span>y</span></span> <span class="day">26</span><span class="year">, 2021</span></span>
 	</div>
 	<a href="#" class="image featured"><img src="#" alt="" /></a>
 	<p>
+<<<<<<< HEAD
 		这次的post是从txt文件po上来的。昨天和前天实现了，图片上传并在页面上显示和删除，以及从后端的文件中读取html的content。算是不小的啊这个进步？
 		反正我是学了很多，头超大。
 		随后要进行图片和文本的保存，还有日期的跳转和保存。
@@ -15,5 +16,89 @@
 		</br>将近早上的时候了解到，一般都是接database而不是用txt文档。。。。。。emmmmmmmm
 		</br>我去搜一下怎么接database的api,顺便创建一个mysql的账号吧。
 		</br>以上
+=======
+		The configuration of the five forces differs by industry.
+the strongest competitive force or forces determine the profitability of an industry and become the most important to strategy formulation.
+有时候最sailent force不一定最明显。
+industry structure grows out of a set of ECN and TECH chara that determine the strength of each competitive force.
+(是ECN 和TECH的不同导致每个industry的竞争不同)
+
+
+Threat of entry 
+会带来新的竞争对手，以此来put a cap on the prodit potential of an industry。
+竞争者如果在其他领域小有成就，会带着更多的资金来击垮你。
+对策： barriers to entry
+1. sypply-side ECN of scale (larger volumes enjoy lower costs per unit/ research / customer marketing / logistic system / etc.)
+2. demand-side benefits of scale (buyer willingness to pay your product) reduceing the price the newcomer can command until it builds up a large base of customers.
+3. customer switching costs 
+4. capital requirements (invest large financial resources for fixed facilities / build inventories and fund startup losses) high return 可能会降低这一障碍
+5. Incumbency advantage independent of size (no matter the size, incumbents may have cost or quality advantages e.g. proprietary technology / 
+	preferencetial access access to the best MTL source / preemption of the most favorable geographic locations / established brand ID / cumlative experience to produce efficiently)
+6. unequal access to distribution channels (the more limited the wholesale or retail channels are and the more that existing competitors have tied them up, the tougher entry into an industry)
+	sometimes access to distribution is so high a barrier that new entrants must bypass distribution channels altogether or create their own
+7. restrictive GVN policy (hinder or aid new entry directly & amplify the other entry barriers) e.g. licensing requirements and restructoins on foreign investment / safety regulation
+	当然这也可以让entry变得容易
+Expected retaliation 预测现有公司的反击也会影响新进入的公司是否要进入 Incumbents oftenuse public statements and responses to one entrant to send a message to other prospective entrants abt
+	their commitment to defending MKT share. 新人可能会对你之前的反击害怕 / 你可能有钱或资源跟他竞争 / 价格战 / 行业上升程度慢很难做大 
+Analysis of barriers to entry and expected retaliation 是对新人的阻挡
+
+
+
+The power of suppliers
+开价更高，质量更低，服务更差，或者给你的竞争对手那里转移你的资金。
+如果 it is more concentrated than the industry it sells / supplier对你的依赖度不重 / 换供应商会非常的困难 / 供应商的货物很differentiated / 没有可替换物 / 压榨过头的联合反抗
+	时，power of supplier会变大
+
+
+
+The Power of Buyers
+想要更多的value,更好的服务，更棒的质量。
+if they have negotiating leverage relative to industry participants, buyers are more powerful. 尤其对于价格敏感性用户
+如果顾客群体 少量的顾客或者一个顾客对一个供应商进行大量的购买 / 商品不differentiated / switching cost is low / vendor转的中间价太高直接绕过你进行购买 
+	时power of buyer 会很大
+一个顾客群体会是价格敏感性的当 顾客购买的物品cost structure 或者 procurement budget占其比重很大（没啥技术含量的东西） / 顾客资金不足或者盈利不高 / 服务和质量对于产品不是很重要
+	 / 对于focus on price的顾客其他的花费影响不大 
+不同产业里顾客间的差别不大，唯一的区别是their needs can be intangible and harder to quantify.
+中间商和其他的买家使用的分析方法是相同的，当他们可以左右终端顾客的思想时他们的买家力会上升。减少中介会给producer带来更大的利益
+
+
+
+The Threat of Substitutes
+可代替物威胁 profit & reduce the bonanza an industry can reap in good times (growth potential)
+substitute products or services limit an industry's profit potential by placing a ceiling on prices. Distance itself from substitutes.
+Threat 很高如果 it offer an attractive price-performance trade-off to the industry's product / cost of switching to the substitute is low
+
+
+
+Rivalry Aming Existing Competitors
+price discounting, new product introductions, AD campaigns and service improvements
+limit the profitability of an industry depend on intensity with the companies compete and on the basis on which they compete. 
+Intensity is great if: 许多竞争者或者竞争者相同大小 / 行业增长缓慢导致MKT share fights / exit barriers are high 尽管没钱赚还是要继续 / 竞争者对BUS 很坚定并很坚定的想成为领导 e.g. 国有企业
+	想要更加有威望和提高就业率
+Rivalry对profitability是非常有破坏性的如果它们针对价格进行竞争
+价格竞争在以下情况容易发生： 竞争者间的product几乎一样并且switching cost低 / FC很高然而MC很低 导致竞争者降价以此来卖的多来弥补FC / capacity must be expanded in large increments to be efficient
+	/ 商品容易变质需要尽快出售 导致降价以达成目的
+对除了价格的竞争不太可能会影响你的利润 e.g. product feature, support services, delivery time, or brand image 因为他们提供价值并support higher prices
+当所有的人都竞争same dimensions,就会变成zero-sum competition； 但是rivalry可以是positive sum, 当大家服务不同的customer segments时其实就是提升了行业平均利润。
+shift the nature of competition in a more positive direction
+
+
+
+
+Factors, Not Forces
+Five forces = overall structure 
+尤其重要的是，要避免将某个行业的某些可见属性误认为其基础结构
+1. Industry growth rate 在mute rivalry的同时也可以put suppliers in a powerful position 并且high growth with low entry abrriers will draw in entrants. 行业增长不等于利润增长
+2. technology and innovation 先进的科技并不使行业变得更加吸引或不吸引人
+3. GVN 政府的介入并不代表可利润性，最好的方法是去针对某一个政策来评估
+4. Complementary products and services e.g. SW + HW 比 分开售卖更有利可图
+
+
+
+
+
+
+
+>>>>>>> 08464d69313c90c5981ccbf9722776ebd143593e
 	</p>				
 </article>
