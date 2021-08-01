@@ -1,0 +1,82 @@
+body{
+    padding: 0;
+    margin: 0px;
+}
+
+.first{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 150%;
+    background-image: linear-gradient(180deg, rgba(29, 29, 29, 0.16), rgba(29, 29, 29, 0.16)),
+                        url(../imgs/samuel-ferrara-6dqCCs0vCcU-unsplash.jpg);
+    background-size:  cover;
+    background-position: bottom;
+    background-repeat: repeat, no-repeat;
+    background-attachment: scroll, scroll;
+}
+
+.header{
+    border-bottom: white;
+}
+
+.title{
+    animation: loading-title 2s .5s cubic-bezier(0,0.5,0,1) forwards;
+    opacity: 0;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+    top: 20%;
+    transform:none;
+}
+
+.big-title{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 55px;
+    letter-spacing: -0.8px;
+    word-spacing: 0.8px;
+    color: #e7d18f;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 3px rgb(2 2 2 / 85%);
+    margin-bottom: 0px;
+}
+
+.medium-title{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 25px;
+    letter-spacing: -0.8px;
+    word-spacing: 0.8px;
+    color: #e7d18f;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 3px rgb(2 2 2 / 85%);
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+
+.small-title{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.8px;
+    word-spacing: 0.8px;
+    color: #e7d18f;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 3px rgb(2 2 2 / 85%);
+    margin-top: 1.5px;
+    padding-left: 5px;
+}
+
+@keyframes loading-title{
+    100%{
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+}
